@@ -17,7 +17,6 @@ import com.twitter.sdk.android.core.Result;
 import com.twitter.sdk.android.core.TwitterException;
 import com.twitter.sdk.android.core.models.Tweet;
 import com.twitter.sdk.android.core.services.StatusesService;
-import com.twitter.sdk.android.tweetcomposer.TweetComposer;
 import com.twitter.sdk.android.tweetui.TweetViewAdapter;
 
 import java.util.List;
@@ -84,8 +83,10 @@ public class TwitsFragment extends Fragment {
         composeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TweetComposer.Builder builder = new TweetComposer.Builder(getActivity());
-                builder.show();
+                FragmentTransaction transaction = getFragmentManager()
+                        .beginTransaction();
+                transaction.replace(R.id.container, new ComposeFragment());
+                transaction.commit();
             }
         });
 

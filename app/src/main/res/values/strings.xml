@@ -8,4 +8,8 @@
     <string name="attention">Внимание</string>
     <string name="exit">Вы уверены что хотите выйти?</string>
     <string name="quit">Выйти</string>
+    <string name="take_photo">Снять фото</string>
+    <string name="choose_photo">Выбрать фото</string>
+    <string name="cancel">Отмена</string>
+    <string name="add_photo">Добавить фото</string>
 </resources>
